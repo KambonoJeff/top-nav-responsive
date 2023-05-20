@@ -2,46 +2,43 @@
     margin: 0;
     padding: 0;
 }
-header{
-    height: 35vh;
-            background-image: url('eagle.jpg');
-            background-size:cover;
-            background-position: center;
-            background-repeat: no-repeat;
-}
+
 body{
-    height: 100000px;
-    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('eagle.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+    font-size: 20px;
+	font-weight: bolder;
+    letter-spacing: 8px;
 }
+
 ul{
     list-style-type: none;
-    background-color: rgb(218, 178, 21);   
-    overflow: hidden;/*enables background color to be visible*/
     position: sticky;
-    position: -webkit-sticky;
     top: 0;
 }
 li{
     float: left;
-    border-right: 1px solid rgb(112, 97, 55);
 }
+ul li a{
+    background-color:goldenrod ;
+    color: rgba(0, 0, 0, 0.466);
+	font-weight: bolder;
 
-/*removes border from the last element*/
-li:nth-last-child(2){
-    border-right: none;
+
 }
-
 li a:hover{
     cursor: pointer;
 }
-li a:hover:not(.active){
-    background-color: rgb(130, 99, 134);
-    color: goldenrod;
-}
+
 /* To highlight the current active tab*/
 .active{
     background-color: rgb(128, 166, 152);
     color:#24565a;
+    border-radius: 1px;
 }
 
 .right-content{
@@ -53,6 +50,8 @@ li a:hover:not(.active){
     }
 }
 li a, .dropbtn{
+    width: 13em;
+
     display: inline-block;
     color: #000000;
     padding: 14px 16px;    
@@ -60,7 +59,10 @@ li a, .dropbtn{
 }
 /*to be deleted*/
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    border: 2px solid goldenrod ;
+    border-radius: 3px;
+    color: aliceblue;
+
 }
 
 
@@ -70,18 +72,27 @@ li.dropdown{
 /*content inside the dropdown btn*/
 .dropdown-content{
     display: none;/*removes the content from direct display*/
-    min-width: 160px;
+    width: 13em;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: -1;
 }
 .dropdown-content a{
-    color: #000000;
+    background-color: black;
+    color: goldenrod;
     display: block;
     text-decoration: none;
     padding: 12px 16px;
     text-align: left;
 }
-.dropdown-content a:hover {background-color: #f1f1f1;}
 .dropdown:hover .dropdown-content{
     display: block;
+}
+.dropbtn{
+    color:black;
+    font-weight: 900;
+    border-radius: 3px;
+} 
+.right-content:hover{
+    background-color: rgb(130, 99, 134);
+    color: goldenrod;
 }
