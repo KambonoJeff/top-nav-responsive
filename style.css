@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 35vh;
+            background-image: url('eagle.jpg');
+            background-size:cover;
+            background-position: center;
+            background-repeat: no-repeat;
+}
+body{
+    height: 100000px;
+    background-color: white;
+}
+ul{
+    list-style-type: none;
+    background-color: rgb(218, 178, 21);   
+    overflow: hidden;/*enables background color to be visible*/
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+li{
+    float: left;
+    border-right: 1px solid rgb(112, 97, 55);
+}
+
+/*removes border from the last element*/
+li:nth-last-child(2){
+    border-right: none;
+}
+
+li a:hover{
+    cursor: pointer;
+}
+li a:hover:not(.active){
+    background-color: rgb(130, 99, 134);
+    color: goldenrod;
+}
+/* To highlight the current active tab*/
+.active{
+    background-color: rgb(128, 166, 152);
+    color:#24565a;
+}
+
+.right-content{
+    float: right;
+}
+@media screen and (max-width:600px) {
+    li,ul > li{
+        float: none;
+    }
+}
+li a, .dropbtn{
+    display: inline-block;
+    color: #000000;
+    padding: 14px 16px;    
+    text-decoration: none;
+}
+/*to be deleted*/
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+
+li.dropdown{
+    position: relative;
+}
+/*content inside the dropdown btn*/
+.dropdown-content{
+    display: none;/*removes the content from direct display*/
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: -1;
+}
+.dropdown-content a{
+    color: #000000;
+    display: block;
+    text-decoration: none;
+    padding: 12px 16px;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
